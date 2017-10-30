@@ -16,8 +16,8 @@ var PFParser = require("pdf2json/pdfparser"); // doc: https://github.com/modesty
 
 function forEachItem(pdf, handler){
   var pageNumber = 0;
-  for (var p in pdf.data.Pages) {
-    var page = pdf.data.Pages[p];
+  for (var p in pdf.formImage.Pages) {
+    var page = pdf.formImage.Pages[p];
     handler(null, {
       page: ++pageNumber
     });
